@@ -38,6 +38,11 @@ function showProgress() {
 function showScores() {
 	var gameOverHtml = "<h1>Resultado</h1>";
 	gameOverHtml += "<h2 id='score'>Acertou: " + quiz.score + "/5</h2>";
+    if(quiz.score < 3){
+        gameOverHtml += "<h2 id='score'>Que pena, aprenda sobre a Ironhack.</h2>";
+    }else{
+        gameOverHtml += "<h2 id='score'>Parabéns você conhece bem a IronHack</h2>";
+    }
 	var element = document.getElementById("quiz");
 	element.innerHTML = gameOverHtml;
 
