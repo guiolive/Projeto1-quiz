@@ -41,11 +41,16 @@ function showScores() {
     if(quiz.score < 3){
         gameOverHtml += "<h2 id='score'>Que pena, estude mais sobre a Ironhack.</h2>";
         
+        
     }else{
         gameOverHtml += "<h2 id='score'>Parabéns você conhece bem a IronHack.</h2>";
     }
-	var element = document.getElementById("quiz");
-	element.innerHTML = gameOverHtml;
+setTimeout(function(){
+    window.location.reload();
+}, 3000)
+
+var element = document.getElementById("quiz");
+element.innerHTML = gameOverHtml;
 
 } 
 
